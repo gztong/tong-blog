@@ -1,0 +1,11 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "Personal blog built with angularJS and nodeJS",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gangzheng Tong",
+  "license": "ISC"
+}
