@@ -1,0 +1,134 @@
+<!-- start tech stack -->
+<section id="stack text-center">
+  <h2><i class="fa fa-wrench"></i>&nbsp Tech Stack</h2>
+
+  <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          One of three columns
+        </div>
+        <div class="col-md-4">
+          One of three columns
+        </div>
+        <div class="col-md-4">
+          One of three columns
+          <span>laa</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+          One of three columns
+        </div>
+        <div class="col-sm-4">
+          One of three columns
+        </div>
+        <div class="col-sm-4">
+          One of three columns
+        </div>
+      </div>
+
+  </div>
+
+
+
+</section>
+<!-- end tech stack -->
+
+
+<!-- start projects -->
+<section id="projects">
+  <div class="container">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 text-center">
+      <h2><i class="fa fa-wrench"></i>&nbsp PROJECTS</h2>
+    </div>
+    <!-- projects -->
+    <div ng-repeat="proj in projects" class="col-md-12 project-row">
+      <div class="col-sm-8 col-md-8">
+        <h3><a href={{proj.url}} target="_blank">{{proj.name}}</a></h3>
+        <h4>{{proj.subtitle}}</h4>
+        <div ng-bind-html="proj.description | trust"></div>
+      </div>
+      <div class="col-sm-4 col-md-4">
+        <div class="project-image-container">
+          <a href={{proj.url}} target="_blank">
+            <img class="project-image" ng-src="{{proj.image}}" class="img-responsive" alt={{proj.name}}>
+          </a>
+        </div>
+      </div>
+      <div class="project-link col-md-12 ">
+        <p>
+          <a ng-if="proj.playstore" href={{proj.playstore}}><img src="images/google-play.png"
+                                                                 alt="Get it on Google Play" width="90" height="32"></a>
+          <a ng-if="proj.appstore" href={{proj.appstore}}><img src="images/AppStore.png" alt="AppStore" width="90"
+                                                               height="32"></a>
+          <a ng-if="proj.github" href={{proj.github}}><img src="images/GitHub.png" alt="Github.png" width="32"
+                                                           height="32"></a>
+          <a ng-if="proj.demo" href={{proj.demo}}><img src="images/Demo.png" alt="demo" width="32" height="32"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end projects -->
+
+<!-- start experiences -->
+<section id="experience" class="text-center">
+  <div class="container">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 text-center">
+      <h2><i class="fa fa-th-list"></i> &nbsp EXPERIENCES</h2>
+    </div>
+    <!-- experiencess -->
+    <div ng-repeat="exp in experiences" class="row col-md-12">
+      <div class="text">
+        <h3>{{exp.role}}</h3>
+        <h5>{{exp.time}}</h5>
+        <h5><a href={{exp.url}}>{{exp.team}}</a>, {{exp.location}}</h5>
+        <div class="col-md-10">
+          <div ng-bind-html="exp.description | trust"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end  experiences -->
+
+<!-- start contact -->
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 text-center">
+        <h2>CONTACT ME</h2>
+      </div>
+      <div class="col-md-12"></div>
+      <div class="col-sm-6 col-md-4 address">
+        <h3>MY ADDRESS</h3>
+        <p><i class="fa fa-phone"></i> 412-932-4188</p>
+        <p><i class="fa fa-envelope-o"></i> <a href="#">tonggangzheng@gmail.com</a></p>
+        <p><i class="fa fa-globe"></i> <a href="#">http://www.tonggangzheng.com</a></p>
+      </div>
+
+      <div class="col-sm-6 col-md-8">
+        <form action="#" method="POST" role="form">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Name" ng-model="msg.name">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Email" ng-model="msg.mail">
+          </div>
+          <div class="col-md-12">
+            <textarea class="form-control" rows="6" placeholder="Message" ng-model="msg.text"></textarea>
+          </div>
+          <div class="col-md-12">
+            <input type="button" value="SEND MESSAGE" class="form-control" ng-click="sendMessage()">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end contact -->

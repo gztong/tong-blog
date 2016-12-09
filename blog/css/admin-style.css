@@ -1,0 +1,72 @@
+.content {
+  margin: auto;
+  width: 50%;
+}
+
+.row {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.info {
+  margin: 40px;
+  text-align: center;
+}
+
+.login-button {
+  display: inline-block;
+  width: 40%;
+  right: 0px;
+  float: right;
+}
+
+.toolbar {
+  display: inline-block;
+}
+
+body { margin-bottom: 70px; }
+
+.project-container {
+  width: 90%;
+  margin: auto;
+}
+
+.experience-container {
+  width: 90%;
+  margin: auto;
+}
+
+th {
+  text-align: center;
+}
+
+tr {
+  text-align: center;
+}
+
+.same-line {
+  margin-top: 10px;
+  display: inline;
+}
+
+.form-container {
+  margin-bottom: 50px;
+
+}
+
+.add-button {
+  display: inline-block;
+  width: 40%;
+  right: 0px;
+  float: right;
+  margin-top: 10px; 
+}
+
+.form-control {
+  margin-top: 5px;
+  border-radius: 0px;
+}
+
+.logout {
+  float: right;
+}

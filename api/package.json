@@ -1,0 +1,18 @@
+{
+  "name": "blog",
+  "description": "Blog api",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "~1.0.2",
+    "express": "~4.1.1",
+    "express-jwt": "~0.2.1",
+    "feed": "^0.2.6",
+    "json": "0.0.14",
+    "jsonwebtoken": "~0.4.0",
+    "mongoose": "~3.8.8",
+    "morgan": "~1.0.1",
+    "redis": "~0.10.1"
+  }
+}

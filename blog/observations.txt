@@ -1,0 +1,37 @@
+Accuracy:
+fc_6: 0.8175
+fc_7: 0.8475
+fc_8: 0.8575
+
+From the above we can see as the number of layers grow, the accuray gets improved.
+
+From the confusion matrix C_6
+
+C_6 =
+
+    19     0     0     0     0     0     0     0     0     0     1     0     0     0     0     0     0     2     0     0
+     0    14     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0    17     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     2     0
+     1     1     0    12     0     3     0     2     1     3     0     1     0     0     0     0     0     0     0     0
+     0     0     0     2    14     0     0     0     1     1     0     0     0     0     0     0     0     0     0     1
+     0     3     0     0     0    17     0     0     0     0     1     0     0     0     0     1     0     0     0     0
+     0     0     1     0     0     0    18     0     0     0     0     0     0     0     0     0     3     0    11     0
+     0     0     0     0     1     0     0    18     0     0     0     0     0     0     0     0     0     0     1     0
+     0     0     0     0     1     0     1     0    17     0     0     0     1     0     0     0     0     0     0     1
+     0     0     0     5     2     0     0     0     1    16     0     0     0     0     0     0     0     0     1     1
+     0     1     0     0     1     0     0     0     0     0    17     0     0     0     0     1     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0    19     0     0     0     0     0     0     0     0
+     0     0     1     0     0     0     0     0     0     0     0     0    19     0     0     1     0     0     2     0
+     0     0     1     0     0     0     0     0     0     0     0     0     0    19     0     0     1     0     0     0
+     0     0     0     0     0     0     1     0     0     0     0     0     0     1    20     0     0     0     0     0
+     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0    17     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0    16     0     0     0
+     0     0     0     1     1     0     0     0     0     0     1     0     0     0     0     0     0    18     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     3     0
+     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0    17
+
+We can see that most of the label are predicted correct. One significant error occurs at the colomn 19, which predict 11 images to be the class No.19 but they are acturally class No.7. By examing what the class id represents, we found class No.19 is "swan" and class No.7 is "duck", which makes sense bacasue these two classes are very similar and even human sometimes can not distinguish.
+
+
+
+

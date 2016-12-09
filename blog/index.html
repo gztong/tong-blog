@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app='blog'>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gangzheng Tong's personal blog, blog about computer science technologies, javascript, iOS development and so on">
+  <meta name="keywords" content="Gangzheng Tong, tech, Javacript, iOS, blog, pittsburgh, pitt, computer science">
+  <meta name="author" content="Gangzheng Tong">
+  <title>Gangzheng Tong's Blog</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="lib/wysiwyg/css/bootstrap3-wysiwyg5.css" rel="stylesheet">
+  <!-- <base href="/"> -->
+</head>
+<body id='top'>
+  <!-- start navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="#top" class="navbar-brand">Gangzheng Tong</a>
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#/">Home</a></li>
+          <li><a href="#/blog1">Blog</a></li>
+          <li ng-if="isAuthenticated"><a href="" ng-click="logOut()">Log Out</a></li>
+          <li ng-if="!isAuthenticated"><a href="#/admin/login">Login</a></li>
+        </ul>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end navigation -->
+
+  <div ng-view class="main-container"></div>
+
+  <!-- start footer -->
+  <footer class="text-center" id="foot">
+    <div class="container">
+      <div class="row">
+        <div class="social_icon">
+          <a href="https://www.facebook.com/gangzheng.tong" target="_blank" class="fa fa-facebook"></a>
+          <a href="https://github.com/gztong" target="_blank" class="fa fa-github"></a>
+          <a href="https://www.linkedin.com/in/gztong" target="_blank" class="fa fa-linkedin"></a>
+        </div>
+      </div>
+      <p>Built by Gangzheng | 2016 | <a href="./php/admin.php">admin</a></p>
+    </div>
+  </footer>
+  <!-- end footer -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js""></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="lib/wysiwyg/js/wysihtml5-0.3.0.min.js"></script>
+  <script src="lib/wysiwyg/js/bootstrap3-wysihtml5.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/services.js"></script>
+</body>
+
+
+</html>

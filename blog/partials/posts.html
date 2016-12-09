@@ -1,0 +1,34 @@
+<div class="title-label">
+    <h3>My Posts</h3>
+    <div class="panel panel-default toolbar">
+      <div class="panel-body">
+            <a href="#/admin">Manage</a>
+      </div>
+    </div>
+</div>
+<section class="post" ng-repeat="post in posts">
+    <header class="post-header">
+        <img class="post-avatar" alt="avatar" height="52" width="52" src="img/avatar.jpg">
+        <h2 class="post-title"><a href="#/post/{{post._id}}">{{post.title}}</a></h2>
+        <div class="post-meta"><i class="fa fa-bullseye"></i> Posted on {{post.created | date:'medium'}}</div>
+            <div class="post-meta">
+                <ul class="list-inline">
+                    <li class="post-meta"><i class="fa fa-thumbs-up"></i> {{post.likes}}</li>
+                    <i class="fa fa-tags"></i>
+                    <li ng-repeat="tag in post.tags">
+                        <a class="label label-success" href="#/tag/{{tag}}">{{tag}}</a>
+                    </li>
+                </ul>
+            </div>
+
+    </header>
+    <div class="post-content">
+        <p ng-bind-html="post.content">
+            {{post.content}}
+        </p>
+        <div class="list-inline">
+            <a href="#/post/{{post._id}}" class="btn btn-primary">Read More</a>
+            <a href="#/admin/post/edit/{{post._id}}" class="btn btn-warning btn-xs" class="isAuthenticated"><span class="glyphicon glyphicon-edit"></span></a>
+        </div>
+    </div>
+</section>
