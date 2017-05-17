@@ -8,8 +8,8 @@ var appDirectives = angular.module('appDirectives', []);
 
 var options = {};
 options.api = {};
-//options.api.base_url = "http://gtong.me:3001";
-options.api.base_url = " http://127.0.0.1:3001";
+options.api.base_url = "http://gtong.me:3001";
+//options.api.base_url = " http://127.0.0.1:3001";
 app.config(['$locationProvider', '$routeProvider', 
   function($location, $routeProvider) {
     $routeProvider.

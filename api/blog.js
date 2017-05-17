@@ -15,7 +15,7 @@ var routes = {};
 routes.posts = require('./route/posts.js');
 routes.users = require('./route/users.js');
 routes.rss = require('./route/rss.js');
-
+routes.other = require('./route/other.js');
 
 app.all('*', function(req, res, next) {
   res.set('Access-Control-Allow-Origin', '*');
@@ -67,5 +67,10 @@ app.delete('/post/:id', jwt({secret: secret.secretToken}), tokenManager.verifyTo
 
 //Serve the rss feed
 app.get('/rss', routes.rss.index);
+
+
+// Other Service
+app.post('/other/yj_verify', routes.other.yj_verify); 
+
 
 console.log('Blog API is starting on port 3001');

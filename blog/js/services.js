@@ -176,3 +176,12 @@ appServices.factory('LikeService', function ($window) {
         }
     }
 });
+
+
+appServices.factory('OtherService', function ($http) {
+    return {
+        yj_verify: function(answer) {
+            return $http.post(options.api.base_url + '/other/yj_verify', {answer: answer});
+        }
+    }
+});

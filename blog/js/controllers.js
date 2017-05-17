@@ -302,8 +302,8 @@ appControllers.controller('PostListTagCtrl', ['$scope', '$routeParams', '$sce', 
 ]);
 
 
-appControllers.controller('yujieCtrl', ['$scope',
-    function yujieCtrl($scope, $routeParams, $sce, PostService) {
+appControllers.controller('yujieCtrl', ['$scope','OtherService',
+    function yujieCtrl( $scope, OtherService) {
         $scope.yj = {};
         $scope.yj.info = "";
         $scope.yj_verify = function(){
@@ -311,13 +311,21 @@ appControllers.controller('yujieCtrl', ['$scope',
 
             // if($scope.yj.answer!= undefined){
             //     // pass
-            //     console.log("lalalaabc");
-            // }else{
-            //     $scope.yj.info = "budui";
-            //     console.log("lalala");
+            //     OtherService.yj_verify($scope.yj.answer).success(function(data) {
+            //         if(data.isPassed){
+            //             //redirect
+            //             window.location.href = data.url;
+
+            //         }else{
+            //             $scope.yj.info = data.url;
+            //         }
+            //     }).error(function(status, data) {
+            //         console.log(status);
+            //         console.log(data);
+            //         $scope.yj.info = "网络可能有问题";
+            //     });
             // }
         }
-
     }
 ]);
 
