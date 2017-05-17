@@ -300,3 +300,26 @@ appControllers.controller('PostListTagCtrl', ['$scope', '$routeParams', '$sce', 
 
     }
 ]);
+
+
+appControllers.controller('yujieCtrl', ['$scope',
+    function yujieCtrl($scope, $routeParams, $sce, PostService) {
+        $scope.yj = {};
+        $scope.yj.info = "";
+        $scope.yj_verify = function(){
+            $scope.yj.info = "你还没回国吧啊喂！回去再点";
+
+            // if($scope.yj.answer!= undefined){
+            //     // pass
+            //     console.log("lalalaabc");
+            // }else{
+            //     $scope.yj.info = "budui";
+            //     console.log("lalala");
+            // }
+        }
+
+    }
+]);
+
+
+

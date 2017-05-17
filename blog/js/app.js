@@ -57,6 +57,10 @@ app.config(['$locationProvider', '$routeProvider',
             controller: 'AdminUserCtrl',
             access: { requiredAuthentication: true }
         }).
+        when('/yujie', {
+            templateUrl: 'partials/yujie.html',
+            controller: 'yujieCtrl'
+        }).
         otherwise({
             redirectTo: '/'
         });
